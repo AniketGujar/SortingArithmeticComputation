@@ -9,3 +9,4 @@ read -p "Enter the value c = " c
 c1=`expr $a + $b \* $c`
 c2=`expr $a \* $b + $c`
 c3=`expr $c + $a / $b`
+c4=`expr $a % $b + $c`
