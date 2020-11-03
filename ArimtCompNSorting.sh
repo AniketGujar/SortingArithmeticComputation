@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -x
 
 echo "This problem computes different arithmetic expressions and Sorts the results"
 
@@ -16,3 +16,12 @@ Comp[c1]=$c1
 Comp[c2]=$c2
 Comp[c3]=$c3
 Comp[c4]=$c4
+
+for i in ${!Comp[@]}
+do
+	Arr[$j]=${Comp[$i]}
+	j=$(($j+1))
+done
+
+echo "Display Array: "
+echo ${dict2Array[@]}
