@@ -1,4 +1,4 @@
-#!/bin/bash -x
+#!/bin/bash
 
 echo "This problem computes different arithmetic expressions and Sorts the results"
 
@@ -22,3 +22,19 @@ do
 	Arr[$j]=${Comp[$i]}
 	j=$(($j+1))
 done
+
+size=${#Arr[@]}
+for (( i=0; i<=$size; i++ ))
+do
+   for (( j=$i; j<=$size; j++ ))
+   do
+      if [[ ${Arr[i]} -lt ${Arr[j]} ]]
+      then
+         temp=${Arr[i]}
+         Arr[i]=${Arr[j]}
+         Arr[j]=$temp
+      fi
+   done
+done
+
+echo "Values in Ascending Order = " ${Arr[@]}
