@@ -22,6 +22,3 @@ do
 	Arr[$j]=${Comp[$i]}
 	j=$(($j+1))
 done
-
-echo "Display Array: "
-echo ${dict2Array[@]}
